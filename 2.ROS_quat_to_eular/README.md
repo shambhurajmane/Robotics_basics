@@ -10,10 +10,9 @@ representations in terms of array of float values. Which then will be converted 
 angles representations.
 ## How to build and run tests
 Open a new terminal and source your ROS 2 installation so that ros2 commands will
-work.
-ros2 run quat_to_euler quat_subscriber
-ros2 topic pub --once /quat_topic std_msgs/msg/Float32MultiArray
-"{data:0.7071,0.0,0.7071,0.0]}"
+work.<br />
+ros2 run quat_to_euler quat_subscriber<br />
+ros2 topic pub --once /quat_topic std_msgs/msg/Float32MultiArray "{data:0.7071,0.0,0.7071,0.0]}"<br />
 ## Required dependencies to be added in package.xml
 <exec_depend>rclpy</exec_depend>
 <exec_depend>std_msgs</exec_depend>
