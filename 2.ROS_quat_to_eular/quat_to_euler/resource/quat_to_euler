@@ -1,0 +1,33 @@
+ros2 topic pub --once /quat_topic std_msgs/msg/Float32MultiArray "{data:[5.0, 6.0, 7.0]}"
+
+Foundation of Robotics:
+
+Description and purpose
+Here I have created a subscriber as follows.
+a node that converts quaternion representations to Euler angles representations.
+• The subscriber will receive the message published on "/quat_topic" in quaternion representations in terms of array of float values. Which then will be converted into Euler angles representations.
+
+How to build and run tests
+Open a new terminal and source your ROS 2 installation so that ros2 commands will work.
+ros2 run quat_to_euler quat_subscriber
+
+Required dependencies to be added in package.xml
+<exec_depend>rclpy</exec_depend>
+<exec_depend>std_msgs</exec_depend>
+
+Required entry points to be added in setup.py
+entry_points={
+    	'console_scripts': [
+            	'quat_subscriber = quat_to_euler.quat_2_eular:main'
+    	],
+},
+
+Working of nodes
+I have created one nodes, which is "quat_subscriber"
+"subscription" subscribes the topic "quat_topic" and fetches the message data of type Float32MultiArray. Data from the quat_topic is accessed in the callback function "quat_callback". 
+The frequency of incoming data is the frequency of the published topic. 
+Received quaternian representations data is then accessed and converted into eular angles representation and printed on the terminal as roll, pitch and yaw values.
+Message type  : Float32MultiArray (imported from std_msgs directory)
+Topic name : quat_topic
+Callback function : quat_callback
+Queue size: 10
