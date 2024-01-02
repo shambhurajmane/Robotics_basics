@@ -6,7 +6,7 @@ one second.
 • The subscriber will receive these numbers and for each number it will print on the
 screen “I received [the_number_it_received]. It is an [even/odd] number.”
 
-<img src="result.png" alt="Logo" width="1000" height="600">
+<img src="result.png" alt="Logo" width="500" height="300">
 
 ## How to build and run tests
 1) Open a new terminal and source your ROS 2 installation so that ros2 commands
