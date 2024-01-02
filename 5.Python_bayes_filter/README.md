@@ -6,7 +6,7 @@ A Bayes filter was implemented in Python to calculate a belief regarding the sta
 based on a series of actions and measurements. The filter was tested with a provided set of 5 action-measurement
 pairs, iterating through each one to update the belief at every step.
 
-<img src="actions.png" alt="Logo" width="500" height="300">
+<img src="actions.png" alt="Logo" width="500" height="200">
 
 
 ## Given data:
@@ -14,21 +14,21 @@ In this example we have discrete states and discrete actions
 States are State of the door Open or Closed and the actions are robot using its arm trying to open the door
 and do nothing. The State transition probabilities are as shown in figure 2 and 3.
 
-<img src="action_do_nothing.png" alt="Logo" width="500" height="300">
-<img src="action_push.png" alt="Logo" width="500" height="300">
+<img src="action_do_nothing.png" alt="Logo" width="500" height="200">
+<img src="action_push.png" alt="Logo" width="500" height="200">
 
 The robots measurements are noisy. The measurement probabilities are shown in figure 4
 
-<img src="measuremtnt_probability.png" alt="Logo" width="500" height="300">
+<img src="measuremtnt_probability.png" alt="Logo" width="500" height="200">
 
 ## Implementation on paper
 The problem is solved on paper first for better understanding of bayes filter algorithm. Th calculations are as
 follows:
-<img src="1.png" alt="Logo" width="500" height="300">
+<img src="1.png" alt="Logo" width="500" height="700">
 
-<img src="2.png" alt="Logo" width="500" height="300">
+<img src="2.png" alt="Logo" width="500" height="700">
 
-<img src="3.png" alt="Logo" width="500" height="300">
+<img src="3.png" alt="Logo" width="500" height="500">
 
 ## Implementation
 The Python code implements a Bayesian filter for a door state estimation problem using the provided transition
@@ -41,7 +41,7 @@ the belief state after each update, providing insights into how the belief evolv
 measurements.
 The results are shown in figure 8, which are precisely matching with the calculations on paper.
 
-<img src="results.png" alt="Logo" width="500" height="300">
+<img src="results.png" alt="Logo" width="500" height="100">
 
 ## Conclusion
 The Bayes filter implementation was able to successfully incorporate each action and measurement to update
