@@ -4,6 +4,7 @@
 A node that solves the forward kinematics of the manipulator.
 
 <img src="results.png" alt="Logo" width="500" height="300">
+
 ## Description:
 Here I have created a subscriber as follows.
 The subscriber will receive the message published on "/joint_value_topic" in radians in
